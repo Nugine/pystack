@@ -29,7 +29,7 @@ void C_Stack::push(PyObject* val) {
 
 PyObject* C_Stack::pop() {
 	Node* ot = tail;
-    PyObject* val = ot->val;
+    PyObject* val = tail->val;
     if (tail->prev != NULL) {
         tail = tail->prev;
 		delete ot;
